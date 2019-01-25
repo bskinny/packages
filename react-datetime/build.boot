@@ -1,13 +1,13 @@
 (set-env!
   :resource-paths #{"resources"}
-  :dependencies '[[cljsjs/boot-cljsjs "0.10.0"  :scope "test"]
+  :dependencies '[[cljsjs/boot-cljsjs "0.10.3"  :scope "test"]
                   [cljsjs/react "15.6.1-0"]
                   [cljsjs/react-dom "15.6.1-0"]
                   [cljsjs/moment "2.17.1-1"]])
 
 (require '[cljsjs.boot-cljsjs.packaging :refer :all])
 
-(def +lib-version+ "2.8.10")
+(def +lib-version+ "2.16.2")
 (def +version+ (str +lib-version+ "-0"))
 
 (task-options!
@@ -19,8 +19,7 @@
        :license     {"MIT" "http://opensource.org/licenses/MIT"}})
 
 (deftask download-datepicker []
-  (download :url (str "https://github.com/YouCanBookMe/react-datetime/archive/v" +lib-version+ ".zip")
-            :checksum "93717A12AE50C5251FE29868356D5E00"
+  (download :url (str "https://github.com/YouCanBookMe/react-datetime/archive/" +lib-version+ ".zip")
             :unzip true))
 
 (deftask package []
@@ -37,4 +36,5 @@
                           "cljsjs.react.dom"
                           "cljsjs.moment"])
     (pom)
-    (jar)))
+    (jar)
+    (validate-checksums)))

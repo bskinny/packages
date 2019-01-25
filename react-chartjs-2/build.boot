@@ -1,8 +1,8 @@
 (set-env!
   :resource-paths #{"resources"}
-  :dependencies '[[cljsjs/boot-cljsjs "0.10.0" :scope "test"]
+  :dependencies '[[cljsjs/boot-cljsjs "0.10.3" :scope "test"]
                   [cljsjs/react "15.4.2-2"]
-                  [cljsjs/chartjs "2.7.0-0"]])
+                  [cljsjs/chartjs "2.7.3-0"]])
 
 (require '[boot.core :as boot]
          '[boot.tmpdir :as tmpdir]
@@ -10,7 +10,7 @@
          '[cljsjs.boot-cljsjs.packaging :refer :all]
          '[clojure.java.io :as io])
 
-(def +lib-version+ "2.7.0")
+(def +lib-version+ "2.7.4")
 (def +version+ (str +lib-version+ "-0"))
 
 (task-options!

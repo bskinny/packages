@@ -1,10 +1,10 @@
 (set-env!
   :resource-paths #{"resources"}
-  :dependencies '[[cljsjs/boot-cljsjs "0.10.0" :scope "test"]])
+  :dependencies '[[cljsjs/boot-cljsjs "0.10.3" :scope "test"]])
 
 (require '[cljsjs.boot-cljsjs.packaging :refer :all])
 
-(def +lib-version+ "16.3.2")
+(def +lib-version+ "16.6.0")
 (def +version+ (str +lib-version+ "-0"))
 
 (task-options!
@@ -13,7 +13,7 @@
        :description "A Javascript library for building user interfaces"
        :url         "http://facebook.github.io/react/"
        :scm         {:url "https://github.com/cljsjs/packages"}
-       :license     {"BSD" "http://opensource.org/licenses/BSD-3-Clause"}})
+       :license     {"MIT" "http://opensource.org/licenses/MIT"}})
 
 (defn download-react [project part]
   (comp

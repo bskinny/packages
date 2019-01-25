@@ -1,11 +1,11 @@
 (set-env!
  :resource-paths #{"resources"}
- :dependencies '[[cljsjs/boot-cljsjs "0.10.0" :scope "test"]])
+ :dependencies '[[cljsjs/boot-cljsjs "0.10.3" :scope "test"]])
 
 (require '[cljsjs.boot-cljsjs.packaging :refer :all])
 
-(def +lib-version+ "2.22.0")
-(def +version+ (str +lib-version+ "-0"))
+(def +lib-version+ "2.22.2")
+(def +version+ (str +lib-version+ "-2"))
 
 (task-options!
  push {:ensure-clean false}
@@ -26,9 +26,12 @@
         new-deps-file (io/file tmp "deps.cljs")
         path->locale-ns (fn [path] (second (re-matches #"cljsjs/common/locale/(.*)\.inc\.js" path)))
         path->foreign-lib (fn [path]
-                            {:file path
-                             :requires ["cljsjs.moment"]
-                             :provides [(format "cljsjs.moment.locale.%s" (path->locale-ns path))]})]
+                            (let [locale-ns (path->locale-ns path)
+                                  moment-ns (format "moment.locale.%s" locale-ns)
+                                  cljsjs-moment-ns (format "cljsjs.moment.locale.%s" locale-ns)]
+                              {:file path
+                               :requires ["moment"]
+                               :provides [moment-ns cljsjs-moment-ns]}))]
     (with-pre-wrap
       fileset
       (let [existing-deps-file (->> fileset c/input-files (c/by-name ["deps.cljs"]) first)
@@ -42,15 +45,17 @@
 (deftask package []
   (comp
    (download :url (format "https://github.com/moment/moment/archive/%s.zip" +lib-version+)
-             :checksum "eae4dbd3c3668ba508154b3965ad8cf5"
              :unzip true)
                                         ; Locale files are not immediately named .inc.js as we don't want deps-cljs to find them
    (sift :move {#"^moment-[^\/]*/moment\.js"          "cljsjs/development/moment.inc.js"
                 #"^moment-[^\/]*/min/moment\.min\.js" "cljsjs/production/moment.min.inc.js"
                 #"^moment-[^\/]*/locale/(.*)\.js"     "cljsjs/common/locale/$1.js"})
    (sift :include #{#"^cljsjs"})
-   (deps-cljs :name "cljsjs.moment")
+   (deps-cljs
+    :provides ["moment" "cljsjs.moment"]
+    :global-exports '{moment moment})
    (sift :move {#"^cljsjs/common/locale/(.*)\.js" "cljsjs/common/locale/$1.inc.js"})
    (generate-locale-deps)
    (pom)
-   (jar)))
+   (jar)
+   (validate)))

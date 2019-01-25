@@ -1,12 +1,11 @@
 (set-env!
   :resource-paths #{"resources"}
-  :dependencies '[[cljsjs/boot-cljsjs "0.10.0" :scope "test"]
-                  [cljsjs/vega "3.2.1-0"]])
+  :dependencies '[[cljsjs/boot-cljsjs "0.10.3" :scope "test"]
+                  [cljsjs/vega "4.4.0-0"]])
 
 (require '[cljsjs.boot-cljsjs.packaging :refer :all])
 
-(def +lib-version+ "2.2.0")
-
+(def +lib-version+ "3.0.0-rc10")
 (def +version+ (str +lib-version+ "-0"))
 
 (task-options!
@@ -22,7 +21,7 @@
     (download
       :url (str "https://github.com/vega/vega-lite/archive/v" +lib-version+ ".zip")
       :unzip true
-      :checksum "CE12327284D05012D2D6E4B1F609EDFF")
+      :checksum "6EB2917D7331C7CCA770C4E2C3A43AD7")
     (sift :move {(re-pattern (str "^vega-lite-" +lib-version+ "/build/vega-lite.js$")) "cljsjs/development/vega-lite.inc.js"
                  (re-pattern (str "^vega-lite-" +lib-version+ "/build/vega-lite.min.js$")) "cljsjs/production/vega-lite.min.inc.js"})
     (sift :include #{#"^cljsjs"})

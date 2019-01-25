@@ -1,6 +1,6 @@
 (set-env!
   :resource-paths #{"resources"}
-  :dependencies '[[cljsjs/boot-cljsjs "0.10.0" :scope "test"]])
+  :dependencies '[[cljsjs/boot-cljsjs "0.10.3" :scope "test"]])
 
 (require '[cljsjs.boot-cljsjs.packaging :refer :all])
 
@@ -13,7 +13,7 @@
        :description "Google Universal Analytics (analytics.js)"
        :url         "https://developers.google.com/analytics/devguides/collection/analyticsjs/"
        :scm         {:url "https://github.com/cljsjs/packages"}
-       :license     {"" ""}})
+       :license     {"Apache v2" "http://www.apache.org/licenses/LICENSE-2.0"}})
 
 (deftask package []
   (comp

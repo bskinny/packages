@@ -1,13 +1,13 @@
 (set-env!
  :resource-paths #{"resources"}
- :dependencies '[[cljsjs/boot-cljsjs "0.10.0" :scope "test"]
+ :dependencies '[[cljsjs/boot-cljsjs "0.10.3" :scope "test"]
                  [cljsjs/react "16.2.0-3"]
                  [cljsjs/react-dom "16.2.0-3"]
                  [cljsjs/moment "2.17.1-1"]])
 
 (require '[cljsjs.boot-cljsjs.packaging :refer :all])
 
-(def +lib-version+ "3.5.0")
+(def +lib-version+ "3.12.0")
 (def +version+ (str +lib-version+ "-0"))
 
 (task-options!
@@ -48,10 +48,9 @@
            #"^antd.min.css$" "cljsjs/antd/production/antd.min.inc.css"})
    (sift :include #{#"cljsjs"})
    (deps-cljs
-    :name "cljsjs.antd"
-    :requires ["cljsjs.react"
-               "cljsjs.react.dom"
-               "cljsjs.moment"])
+    :provides ["antd" "cljsjs.antd"]
+    :requires ["react" "react-dom" "moment"]
+    :global-exports '{antd antd})
    (pom)
    (jar)
    (validate-checksums)))

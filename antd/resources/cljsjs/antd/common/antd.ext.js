@@ -31,8 +31,7 @@ var antd = {
         }
       },
       "defaultProps": {
-        "href": {},
-        "prefixCls": {}
+        "href": {}
       }
     },
     "childContextTypes": {
@@ -43,7 +42,6 @@ var antd = {
     "defaultProps": {
       "affix": {},
       "getContainer": function () {},
-      "prefixCls": {},
       "showInkInFixed": {}
     }
   },
@@ -63,14 +61,12 @@ var antd = {
       "choiceTransitionName": {},
       "filterOption": {},
       "optionLabelProp": {},
-      "prefixCls": {},
       "showSearch": {},
       "transitionName": {}
     }
   },
   "Avatar": {
     "defaultProps": {
-      "prefixCls": {},
       "shape": {},
       "size": {}
     }
@@ -85,8 +81,6 @@ var antd = {
       "count": {},
       "dot": {},
       "overflowCount": {},
-      "prefixCls": {},
-      "scrollNumberPrefixCls": {},
       "showZero": {}
     },
     "propTypes": {
@@ -108,7 +102,6 @@ var antd = {
     "Item": {
       "__ANT_BREADCRUMB_ITEM": {},
       "defaultProps": {
-        "prefixCls": {},
         "separator": {}
       },
       "propTypes": {
@@ -124,7 +117,6 @@ var antd = {
       }
     },
     "defaultProps": {
-      "prefixCls": {},
       "separator": {}
     },
     "propTypes": {
@@ -152,11 +144,14 @@ var antd = {
     "Group": function () {},
     "__ANT_BUTTON": {},
     "defaultProps": {
+      "block": {},
       "ghost": {},
-      "loading": {},
-      "prefixCls": {}
+      "loading": {}
     },
     "propTypes": {
+      "block": {
+        "isRequired": function () {}
+      },
       "className": {
         "isRequired": function () {}
       },
@@ -188,9 +183,9 @@ var antd = {
       "fullscreen": {},
       "locale": {},
       "mode": {},
+      "onChange": function () {},
       "onPanelChange": function () {},
-      "onSelect": function () {},
-      "prefixCls": {}
+      "onSelect": function () {}
     },
     "propTypes": {
       "className": {
@@ -212,6 +207,9 @@ var antd = {
         "isRequired": function () {}
       },
       "monthFullCellRender": {
+        "isRequired": function () {}
+      },
+      "onChange": {
         "isRequired": function () {}
       },
       "onPanelChange": {
@@ -239,20 +237,16 @@ var antd = {
     "defaultProps": {
       "arrows": {},
       "dots": {},
-      "draggable": {},
-      "prefixCls": {}
+      "draggable": {}
     }
   },
   "Cascader": {
     "defaultProps": {
       "allowClear": {},
       "disabled": {},
-      "inputPrefixCls": {},
-      "notFoundContent": {},
       "options": {},
       "placeholder": {},
       "popupPlacement": {},
-      "prefixCls": {},
       "transitionName": {}
     }
   },
@@ -264,8 +258,7 @@ var antd = {
         }
       },
       "defaultProps": {
-        "options": {},
-        "prefixCls": {}
+        "options": {}
       },
       "propTypes": {
         "defaultValue": {
@@ -286,8 +279,7 @@ var antd = {
       }
     },
     "defaultProps": {
-      "indeterminate": {},
-      "prefixCls": {}
+      "indeterminate": {}
     }
   },
   "Col": {
@@ -341,78 +333,71 @@ var antd = {
         "appear": function () {},
         "enter": function () {},
         "leave": function () {}
-      },
-      "prefixCls": {}
+      }
     }
   },
+  "Comment": function () {},
+  "ConfigProvider": function () {},
   "DatePicker": {
     "MonthPicker": {
       "defaultProps": {
         "format": {},
-        "inputPrefixCls": {},
         "locale": {},
         "onChange": function () {},
         "onOk": function () {},
         "onOpenChange": function () {},
         "popupStyle": {},
-        "prefixCls": {},
         "transitionName": {}
       }
     },
     "RangePicker": {
       "defaultProps": {
         "format": {},
-        "inputPrefixCls": {},
         "locale": {},
         "onChange": function () {},
         "onOk": function () {},
         "onOpenChange": function () {},
         "popupStyle": {},
-        "prefixCls": {},
         "transitionName": {}
       }
     },
     "WeekPicker": {
       "defaultProps": {
         "format": {},
-        "inputPrefixCls": {},
         "locale": {},
         "onChange": function () {},
         "onOk": function () {},
         "onOpenChange": function () {},
         "popupStyle": {},
-        "prefixCls": {},
         "transitionName": {}
       }
     },
     "defaultProps": {
       "format": {},
-      "inputPrefixCls": {},
       "locale": {},
       "onChange": function () {},
       "onOk": function () {},
       "onOpenChange": function () {},
       "popupStyle": {},
-      "prefixCls": {},
       "transitionName": {}
     }
   },
   "Divider": function () {},
+  "Drawer": function () {},
   "Dropdown": {
     "Button": {
       "defaultProps": {
         "placement": {},
-        "prefixCls": {},
         "type": {}
       }
     },
     "defaultProps": {
       "mouseEnterDelay": {},
       "mouseLeaveDelay": {},
-      "placement": {},
-      "prefixCls": {}
+      "placement": {}
     }
   },
+  "Empty": function () {},
   "Form": {
     "Item": {
       "contextTypes": {
@@ -422,8 +407,7 @@ var antd = {
       },
       "defaultProps": {
         "colon": {},
-        "hasFeedback": {},
-        "prefixCls": {}
+        "hasFeedback": {}
       },
       "propTypes": {
         "children": {
@@ -471,8 +455,7 @@ var antd = {
     "defaultProps": {
       "hideRequiredMark": {},
       "layout": {},
-      "onSubmit": function () {},
-      "prefixCls": {}
+      "onSubmit": function () {}
     },
     "propTypes": {
       "children": {
@@ -492,24 +475,29 @@ var antd = {
       }
     }
   },
-  "Icon": function () {},
+  "Icon": {
+    "createFromIconfontCN": function () {},
+    "getTwoToneColor": function () {},
+    "setTwoToneColor": function () {}
+  },
   "Input": {
     "Group": function () {},
+    "Password": {
+      "defaultProps": {
+        "action": {},
+        "inputPrefixCls": {},
+        "prefixCls": {},
+        "visibilityToggle": {}
+      }
+    },
     "Search": {
       "defaultProps": {
-        "enterButton": {},
-        "inputPrefixCls": {},
-        "prefixCls": {}
+        "enterButton": {}
       }
     },
-    "TextArea": {
-      "defaultProps": {
-        "prefixCls": {}
-      }
-    },
+    "TextArea": function () {},
     "defaultProps": {
       "disabled": {},
-      "prefixCls": {},
       "type": {}
     },
     "propTypes": {
@@ -519,7 +507,7 @@ var antd = {
       "addonBefore": {
         "isRequired": function () {}
       },
-      "autosize": {
+      "allowClear": {
         "isRequired": function () {}
       },
       "className": {
@@ -574,7 +562,6 @@ var antd = {
   },
   "InputNumber": {
     "defaultProps": {
-      "prefixCls": {},
       "step": {}
     }
   },
@@ -601,9 +588,9 @@ var antd = {
         "collapsedWidth": {},
         "collapsible": {},
         "defaultCollapsed": {},
-        "prefixCls": {},
         "reverseArrow": {},
         "style": {},
+        "theme": {},
         "width": {}
       }
     }
@@ -613,29 +600,6 @@ var antd = {
       "Meta": function () {},
       "contextTypes": {
         "grid": {
-          "isRequired": function () {}
-        }
-      },
-      "propTypes": {
-        "column": {
-          "isRequired": function () {}
-        },
-        "lg": {
-          "isRequired": function () {}
-        },
-        "md": {
-          "isRequired": function () {}
-        },
-        "sm": {
-          "isRequired": function () {}
-        },
-        "xl": {
-          "isRequired": function () {}
-        },
-        "xs": {
-          "isRequired": function () {}
-        },
-        "xxl": {
           "isRequired": function () {}
         }
       }
@@ -650,7 +614,6 @@ var antd = {
       "dataSource": {},
       "loading": {},
       "pagination": {},
-      "prefixCls": {},
       "split": {}
     }
   },
@@ -675,8 +638,7 @@ var antd = {
       "loading": {},
       "multiLines": {},
       "notFoundContent": {},
-      "placement": {},
-      "prefixCls": {}
+      "placement": {}
     },
     "getMentions": function () {},
     "toContentState": function () {},
@@ -685,13 +647,18 @@ var antd = {
   "Menu": {
     "Divider": {
       "defaultProps": {
-        "disabled": {}
+        "className": {},
+        "disabled": {},
+        "style": {}
       },
       "propTypes": {
         "className": {
           "isRequired": function () {}
         },
         "rootPrefixCls": {
+          "isRequired": function () {}
+        },
+        "style": {
           "isRequired": function () {}
         }
       }
@@ -732,7 +699,8 @@ var antd = {
         "antdMenuTheme": {
           "isRequired": function () {}
         }
-      }
+      },
+      "isSubMenu": {}
     },
     "childContextTypes": {
       "antdMenuTheme": {
@@ -753,21 +721,22 @@ var antd = {
     "defaultProps": {
       "className": {},
       "focusable": {},
-      "prefixCls": {},
       "theme": {}
     }
   },
   "Modal": {
     "confirm": function () {},
     "defaultProps": {
+      "cancelButtonDisabled": {},
       "confirmLoading": {},
       "maskTransitionName": {},
+      "okButtonDisabled": {},
       "okType": {},
-      "prefixCls": {},
       "transitionName": {},
       "visible": {},
       "width": {}
     },
+    "destroyAll": function () {},
     "error": function () {},
     "info": function () {},
     "propTypes": {
@@ -775,6 +744,9 @@ var antd = {
         "isRequired": function () {}
       },
       "cancelText": {
+        "isRequired": function () {}
+      },
+      "centered": {
         "isRequired": function () {}
       },
       "closable": {
@@ -812,17 +784,27 @@ var antd = {
     "warn": function () {},
     "warning": function () {}
   },
-  "Pagination": {
-    "defaultProps": {
-      "prefixCls": {},
-      "selectPrefixCls": {}
-    }
-  },
+  "Pagination": function () {},
   "Popconfirm": {
     "defaultProps": {
+      "icon": {
+        "$$typeof": {},
+        "_owner": {},
+        "_store": {},
+        "key": {},
+        "props": {
+          "theme": {},
+          "type": {}
+        },
+        "ref": {},
+        "type": {
+          "createFromIconfontCN": function () {},
+          "getTwoToneColor": function () {},
+          "setTwoToneColor": function () {}
+        }
+      },
       "okType": {},
       "placement": {},
-      "prefixCls": {},
       "transitionName": {},
       "trigger": {}
     }
@@ -833,7 +815,6 @@ var antd = {
       "mouseLeaveDelay": {},
       "overlayStyle": {},
       "placement": {},
-      "prefixCls": {},
       "transitionName": {},
       "trigger": {}
     }
@@ -841,7 +822,6 @@ var antd = {
   "Progress": {
     "defaultProps": {
       "percent": {},
-      "prefixCls": {},
       "showInfo": {},
       "size": {},
       "trailColor": {},
@@ -866,6 +846,12 @@ var antd = {
       "status": {
         "isRequired": function () {}
       },
+      "strokeColor": {
+        "isRequired": function () {}
+      },
+      "strokeLinecap": {
+        "isRequired": function () {}
+      },
       "strokeWidth": {
         "isRequired": function () {}
       },
@@ -886,9 +872,6 @@ var antd = {
         "radioGroup": {
           "isRequired": function () {}
         }
-      },
-      "defaultProps": {
-        "prefixCls": {}
       }
     },
     "Group": {
@@ -898,8 +881,8 @@ var antd = {
         }
       },
       "defaultProps": {
-        "disabled": {},
-        "prefixCls": {}
+        "buttonStyle": {},
+        "disabled": {}
       }
     },
     "contextTypes": {
@@ -908,7 +891,6 @@ var antd = {
       }
     },
     "defaultProps": {
-      "prefixCls": {},
       "type": {}
     }
   },
@@ -920,12 +902,16 @@ var antd = {
         "_store": {},
         "key": {},
         "props": {
+          "theme": {},
           "type": {}
         },
         "ref": {},
-        "type": function () {}
-      },
-      "prefixCls": {}
+        "type": {
+          "createFromIconfontCN": function () {},
+          "getTwoToneColor": function () {},
+          "setTwoToneColor": function () {}
+        }
+      }
     },
     "propTypes": {
       "character": {
@@ -976,9 +962,9 @@ var antd = {
         }
       }
     },
+    "SECRET_COMBOBOX_MODE_DO_NOT_USE": {},
     "defaultProps": {
       "choiceTransitionName": {},
-      "prefixCls": {},
       "showSearch": {},
       "transitionName": {}
     },
@@ -989,7 +975,7 @@ var antd = {
       "className": {
         "isRequired": function () {}
       },
-      "combobox": {
+      "id": {
         "isRequired": function () {}
       },
       "notFoundContent": {
@@ -1012,16 +998,20 @@ var antd = {
       }
     }
   },
+  "Skeleton": {
+    "defaultProps": {
+      "avatar": {},
+      "paragraph": {},
+      "title": {}
+    }
+  },
   "Slider": {
     "defaultProps": {
-      "prefixCls": {},
-      "tipFormatter": function () {},
-      "tooltipPrefixCls": {}
+      "tipFormatter": function () {}
     }
   },
   "Spin": {
     "defaultProps": {
-      "prefixCls": {},
       "size": {},
       "spinning": {},
       "wrapperClassName": {}
@@ -1065,6 +1055,9 @@ var antd = {
         "iconPrefix": {
           "isRequired": function () {}
         },
+        "icons": {
+          "isRequired": function () {}
+        },
         "itemWidth": {
           "isRequired": function () {}
         },
@@ -1095,9 +1088,7 @@ var antd = {
       }
     },
     "defaultProps": {
-      "current": {},
-      "iconPrefix": {},
-      "prefixCls": {}
+      "current": {}
     },
     "propTypes": {
       "current": {
@@ -1112,9 +1103,6 @@ var antd = {
     }
   },
   "Switch": {
-    "defaultProps": {
-      "prefixCls": {}
-    },
     "propTypes": {
       "className": {
         "isRequired": function () {}
@@ -1139,11 +1127,10 @@ var antd = {
       "indentSize": {},
       "loading": {},
       "locale": {},
-      "prefixCls": {},
       "rowKey": {},
-      "rowSelection": {},
       "showHeader": {},
       "size": {},
+      "sortDirections": {},
       "useFixedHeader": {}
     },
     "propTypes": {
@@ -1180,6 +1167,9 @@ var antd = {
       "size": {
         "isRequired": function () {}
       },
+      "sortDirections": {
+        "isRequired": function () {}
+      },
       "useFixedHeader": {
         "isRequired": function () {}
       }
@@ -1190,12 +1180,11 @@ var antd = {
       "defaultProps": {
         "placeholder": {}
       },
-      "displayName": {},
-      "getDefaultProps": {
-        "isReactClassApproved": {}
-      },
       "propTypes": {
         "active": {
+          "isRequired": function () {}
+        },
+        "children": {
           "isRequired": function () {}
         },
         "className": {
@@ -1207,7 +1196,13 @@ var antd = {
         "forceRender": {
           "isRequired": function () {}
         },
+        "id": {
+          "isRequired": function () {}
+        },
         "placeholder": {
+          "isRequired": function () {}
+        },
+        "rootPrefixCls": {
           "isRequired": function () {}
         },
         "style": {
@@ -1217,14 +1212,13 @@ var antd = {
     },
     "defaultProps": {
       "hideAdd": {},
-      "prefixCls": {}
+      "tabPosition": {}
     }
   },
   "Tag": {
     "CheckableTag": function () {},
     "defaultProps": {
-      "closable": {},
-      "prefixCls": {}
+      "closable": {}
     }
   },
   "TimePicker": {
@@ -1239,7 +1233,6 @@ var antd = {
       "focusOnOpen": {},
       "hideDisabledOptions": {},
       "placement": {},
-      "prefixCls": {},
       "transitionName": {}
     }
   },
@@ -1247,12 +1240,11 @@ var antd = {
     "Item": {
       "defaultProps": {
         "color": {},
-        "pending": {},
-        "prefixCls": {}
+        "pending": {}
       }
     },
     "defaultProps": {
-      "prefixCls": {},
+      "mode": {},
       "reverse": {}
     }
   },
@@ -1263,7 +1255,6 @@ var antd = {
       "mouseEnterDelay": {},
       "mouseLeaveDelay": {},
       "placement": {},
-      "prefixCls": {},
       "transitionName": {}
     }
   },
@@ -1285,6 +1276,7 @@ var antd = {
     },
     "defaultProps": {
       "dataSource": {},
+      "locale": {},
       "render": function () {},
       "showSearch": {}
     },
@@ -1296,6 +1288,9 @@ var antd = {
         "isRequired": function () {}
       },
       "dataSource": {
+        "isRequired": function () {}
+      },
+      "disabled": {
         "isRequired": function () {}
       },
       "filterOption": {
@@ -1313,10 +1308,16 @@ var antd = {
       "listStyle": {
         "isRequired": function () {}
       },
+      "locale": {
+        "isRequired": function () {}
+      },
       "notFoundContent": {
         "isRequired": function () {}
       },
       "onChange": {
+        "isRequired": function () {}
+      },
+      "operationStyle": {
         "isRequired": function () {}
       },
       "operations": {
@@ -1337,6 +1338,9 @@ var antd = {
       "showSearch": {
         "isRequired": function () {}
       },
+      "style": {
+        "isRequired": function () {}
+      },
       "targetKeys": {
         "isRequired": function () {}
       },
@@ -1346,6 +1350,12 @@ var antd = {
     }
   },
   "Tree": {
+    "DirectoryTree": {
+      "defaultProps": {
+        "expandAction": {},
+        "showIcon": {}
+      }
+    },
     "TreeNode": {
       "childContextTypes": {
         "rcTree": {
@@ -1407,6 +1417,12 @@ var antd = {
         "isLeaf": {
           "isRequired": function () {}
         },
+        "loaded": {
+          "isRequired": function () {}
+        },
+        "loading": {
+          "isRequired": function () {}
+        },
         "onSelect": {
           "isRequired": function () {}
         },
@@ -1425,6 +1441,12 @@ var antd = {
         "selected": {
           "isRequired": function () {}
         },
+        "style": {
+          "isRequired": function () {}
+        },
+        "switcherIcon": {
+          "isRequired": function () {}
+        },
         "title": {
           "isRequired": function () {}
         }
@@ -1433,11 +1455,10 @@ var antd = {
     "defaultProps": {
       "checkable": {},
       "openAnimation": {
-        "appear": function () {},
+        "appear": {},
         "enter": function () {},
         "leave": function () {}
       },
-      "prefixCls": {},
       "showIcon": {}
     }
   },
@@ -1446,15 +1467,85 @@ var antd = {
     "SHOW_CHILD": {},
     "SHOW_PARENT": {},
     "TreeNode": {
+      "isTreeNode": {},
       "propTypes": {
-        "value": {
+        "checked": {
           "isRequired": function () {}
-        }
+        },
+        "children": {
+          "isRequired": function () {}
+        },
+        "className": {
+          "isRequired": function () {}
+        },
+        "disableCheckbox": {
+          "isRequired": function () {}
+        },
+        "disabled": {
+          "isRequired": function () {}
+        },
+        "dragOver": {
+          "isRequired": function () {}
+        },
+        "dragOverGapBottom": {
+          "isRequired": function () {}
+        },
+        "dragOverGapTop": {
+          "isRequired": function () {}
+        },
+        "eventKey": {
+          "isRequired": function () {}
+        },
+        "expanded": {
+          "isRequired": function () {}
+        },
+        "halfChecked": {
+          "isRequired": function () {}
+        },
+        "icon": {
+          "isRequired": function () {}
+        },
+        "isLeaf": {
+          "isRequired": function () {}
+        },
+        "loaded": {
+          "isRequired": function () {}
+        },
+        "loading": {
+          "isRequired": function () {}
+        },
+        "onSelect": {
+          "isRequired": function () {}
+        },
+        "pos": {
+          "isRequired": function () {}
+        },
+        "prefixCls": {
+          "isRequired": function () {}
+        },
+        "root": {
+          "isRequired": function () {}
+        },
+        "selectable": {
+          "isRequired": function () {}
+        },
+        "selected": {
+          "isRequired": function () {}
+        },
+        "style": {
+          "isRequired": function () {}
+        },
+        "switcherIcon": {
+          "isRequired": function () {}
+        },
+        "title": {
+          "isRequired": function () {}
+        },
+        "value": function () {}
       }
     },
     "defaultProps": {
       "choiceTransitionName": {},
-      "prefixCls": {},
       "showSearch": {},
       "transitionName": {}
     }
@@ -1470,7 +1561,6 @@ var antd = {
       "disabled": {},
       "listType": {},
       "multiple": {},
-      "prefixCls": {},
       "showUploadList": {},
       "supportServerRender": {},
       "type": {}
@@ -1546,6 +1636,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -1567,11 +1660,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -1584,7 +1673,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -1664,6 +1752,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -1685,11 +1776,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -1702,7 +1789,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -1782,6 +1868,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -1803,11 +1892,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {}
@@ -1818,7 +1903,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "locale": {}
@@ -1892,6 +1976,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -1913,11 +2000,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {}
@@ -1928,7 +2011,122 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
+        "searchPlaceholder": {}
+      },
+      "Upload": {
+        "previewFile": {},
+        "removeFile": {},
+        "uploadError": {},
+        "uploading": {}
+      },
+      "locale": {}
+    },
+    "da_DK": {
+      "Calendar": {
+        "lang": {
+          "backToToday": {},
+          "clear": {},
+          "dateFormat": {},
+          "dateSelect": {},
+          "dateTimeFormat": {},
+          "dayFormat": {},
+          "decadeSelect": {},
+          "month": {},
+          "monthBeforeYear": {},
+          "monthSelect": {},
+          "nextCentury": {},
+          "nextDecade": {},
+          "nextMonth": {},
+          "nextYear": {},
+          "now": {},
+          "ok": {},
+          "placeholder": {},
+          "previousCentury": {},
+          "previousDecade": {},
+          "previousMonth": {},
+          "previousYear": {},
+          "rangePlaceholder": {},
+          "timeSelect": {},
+          "today": {},
+          "year": {},
+          "yearFormat": {},
+          "yearSelect": {}
+        },
+        "timePickerLocale": {
+          "placeholder": {}
+        }
+      },
+      "DatePicker": {
+        "lang": {
+          "backToToday": {},
+          "clear": {},
+          "dateFormat": {},
+          "dateSelect": {},
+          "dateTimeFormat": {},
+          "dayFormat": {},
+          "decadeSelect": {},
+          "month": {},
+          "monthBeforeYear": {},
+          "monthSelect": {},
+          "nextCentury": {},
+          "nextDecade": {},
+          "nextMonth": {},
+          "nextYear": {},
+          "now": {},
+          "ok": {},
+          "placeholder": {},
+          "previousCentury": {},
+          "previousDecade": {},
+          "previousMonth": {},
+          "previousYear": {},
+          "rangePlaceholder": {},
+          "timeSelect": {},
+          "today": {},
+          "year": {},
+          "yearFormat": {},
+          "yearSelect": {}
+        },
+        "timePickerLocale": {
+          "placeholder": {}
+        }
+      },
+      "Empty": {
+        "description": {}
+      },
+      "Modal": {
+        "cancelText": {},
+        "justOkText": {},
+        "okText": {}
+      },
+      "Pagination": {
+        "items_per_page": {},
+        "jump_to": {},
+        "jump_to_confirm": {},
+        "next_3": {},
+        "next_5": {},
+        "next_page": {},
+        "page": {},
+        "prev_3": {},
+        "prev_5": {},
+        "prev_page": {}
+      },
+      "Popconfirm": {
+        "cancelText": {},
+        "okText": {}
+      },
+      "Table": {
+        "filterConfirm": {},
+        "filterReset": {},
+        "filterTitle": {},
+        "selectAll": {},
+        "selectInvert": {}
+      },
+      "TimePicker": {
+        "placeholder": {}
+      },
+      "Transfer": {
+        "itemUnit": {},
+        "itemsUnit": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -2008,6 +2206,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -2029,11 +2230,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -2046,7 +2243,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -2126,6 +2322,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -2147,11 +2346,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -2164,7 +2359,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -2244,6 +2438,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -2265,11 +2462,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -2282,7 +2475,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -2320,6 +2512,7 @@ var antd = {
           "rangePlaceholder": {},
           "timeSelect": {},
           "today": {},
+          "weekSelect": {},
           "year": {},
           "yearFormat": {},
           "yearSelect": {}
@@ -2354,6 +2547,7 @@ var antd = {
           "rangePlaceholder": {},
           "timeSelect": {},
           "today": {},
+          "weekSelect": {},
           "year": {},
           "yearFormat": {},
           "yearSelect": {}
@@ -2361,6 +2555,9 @@ var antd = {
         "timePickerLocale": {
           "placeholder": {}
         }
+      },
+      "Empty": {
+        "description": {}
       },
       "Modal": {
         "cancelText": {},
@@ -2383,16 +2580,13 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
         "selectAll": {},
-        "selectInvert": {}
+        "selectInvert": {},
+        "sortTitle": {}
       },
       "TimePicker": {
         "placeholder": {}
@@ -2400,7 +2594,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {},
         "titles": {}
       },
@@ -2409,6 +2602,9 @@ var antd = {
         "removeFile": {},
         "uploadError": {},
         "uploading": {}
+      },
+      "global": {
+        "placeholder": {}
       },
       "locale": {}
     },
@@ -2481,6 +2677,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -2502,11 +2701,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -2519,7 +2714,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -2599,6 +2793,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -2620,11 +2817,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -2637,7 +2830,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -2717,6 +2909,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -2738,11 +2933,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -2755,7 +2946,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -2835,6 +3025,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -2856,16 +3049,13 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
         "selectAll": {},
-        "selectInvert": {}
+        "selectInvert": {},
+        "sortTitle": {}
       },
       "TimePicker": {
         "placeholder": {}
@@ -2873,7 +3063,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -2953,6 +3142,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -2974,11 +3166,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {}
@@ -2989,7 +3177,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "locale": {}
@@ -3063,6 +3250,234 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
+      "Modal": {
+        "cancelText": {},
+        "justOkText": {},
+        "okText": {}
+      },
+      "Pagination": {
+        "items_per_page": {},
+        "jump_to": {},
+        "jump_to_confirm": {},
+        "next_3": {},
+        "next_5": {},
+        "next_page": {},
+        "page": {},
+        "prev_3": {},
+        "prev_5": {},
+        "prev_page": {}
+      },
+      "Popconfirm": {
+        "cancelText": {},
+        "okText": {}
+      },
+      "Table": {
+        "filterConfirm": {},
+        "filterReset": {},
+        "filterTitle": {}
+      },
+      "TimePicker": {
+        "placeholder": {}
+      },
+      "Transfer": {
+        "itemUnit": {},
+        "itemsUnit": {},
+        "searchPlaceholder": {}
+      },
+      "locale": {}
+    },
+    "he_IL": {
+      "Calendar": {
+        "lang": {
+          "backToToday": {},
+          "clear": {},
+          "dateFormat": {},
+          "dateSelect": {},
+          "dateTimeFormat": {},
+          "dayFormat": {},
+          "decadeSelect": {},
+          "month": {},
+          "monthBeforeYear": {},
+          "monthSelect": {},
+          "nextCentury": {},
+          "nextDecade": {},
+          "nextMonth": {},
+          "nextYear": {},
+          "now": {},
+          "ok": {},
+          "placeholder": {},
+          "previousCentury": {},
+          "previousDecade": {},
+          "previousMonth": {},
+          "previousYear": {},
+          "rangePlaceholder": {},
+          "timeSelect": {},
+          "today": {},
+          "weekSelect": {},
+          "year": {},
+          "yearFormat": {},
+          "yearSelect": {}
+        },
+        "timePickerLocale": {
+          "placeholder": {}
+        }
+      },
+      "DatePicker": {
+        "lang": {
+          "backToToday": {},
+          "clear": {},
+          "dateFormat": {},
+          "dateSelect": {},
+          "dateTimeFormat": {},
+          "dayFormat": {},
+          "decadeSelect": {},
+          "month": {},
+          "monthBeforeYear": {},
+          "monthSelect": {},
+          "nextCentury": {},
+          "nextDecade": {},
+          "nextMonth": {},
+          "nextYear": {},
+          "now": {},
+          "ok": {},
+          "placeholder": {},
+          "previousCentury": {},
+          "previousDecade": {},
+          "previousMonth": {},
+          "previousYear": {},
+          "rangePlaceholder": {},
+          "timeSelect": {},
+          "today": {},
+          "weekSelect": {},
+          "year": {},
+          "yearFormat": {},
+          "yearSelect": {}
+        },
+        "timePickerLocale": {
+          "placeholder": {}
+        }
+      },
+      "Empty": {
+        "description": {}
+      },
+      "Modal": {
+        "cancelText": {},
+        "justOkText": {},
+        "okText": {}
+      },
+      "Pagination": {
+        "items_per_page": {},
+        "jump_to": {},
+        "jump_to_confirm": {},
+        "next_3": {},
+        "next_5": {},
+        "next_page": {},
+        "page": {},
+        "prev_3": {},
+        "prev_5": {},
+        "prev_page": {}
+      },
+      "Popconfirm": {
+        "cancelText": {},
+        "okText": {}
+      },
+      "Table": {
+        "filterConfirm": {},
+        "filterReset": {},
+        "filterTitle": {},
+        "selectAll": {},
+        "selectInvert": {}
+      },
+      "TimePicker": {
+        "placeholder": {}
+      },
+      "Transfer": {
+        "itemUnit": {},
+        "itemsUnit": {},
+        "searchPlaceholder": {}
+      },
+      "Upload": {
+        "previewFile": {},
+        "removeFile": {},
+        "uploadError": {},
+        "uploading": {}
+      },
+      "locale": {}
+    },
+    "hi_IN": {
+      "Calendar": {
+        "lang": {
+          "backToToday": {},
+          "clear": {},
+          "dateFormat": {},
+          "dateSelect": {},
+          "dateTimeFormat": {},
+          "dayFormat": {},
+          "decadeSelect": {},
+          "month": {},
+          "monthBeforeYear": {},
+          "monthSelect": {},
+          "nextCentury": {},
+          "nextDecade": {},
+          "nextMonth": {},
+          "nextYear": {},
+          "now": {},
+          "ok": {},
+          "placeholder": {},
+          "previousCentury": {},
+          "previousDecade": {},
+          "previousMonth": {},
+          "previousYear": {},
+          "rangePlaceholder": {},
+          "timeSelect": {},
+          "today": {},
+          "weekSelect": {},
+          "year": {},
+          "yearFormat": {},
+          "yearSelect": {}
+        },
+        "timePickerLocale": {
+          "placeholder": {}
+        }
+      },
+      "DatePicker": {
+        "lang": {
+          "backToToday": {},
+          "clear": {},
+          "dateFormat": {},
+          "dateSelect": {},
+          "dateTimeFormat": {},
+          "dayFormat": {},
+          "decadeSelect": {},
+          "month": {},
+          "monthBeforeYear": {},
+          "monthSelect": {},
+          "nextCentury": {},
+          "nextDecade": {},
+          "nextMonth": {},
+          "nextYear": {},
+          "now": {},
+          "ok": {},
+          "placeholder": {},
+          "previousCentury": {},
+          "previousDecade": {},
+          "previousMonth": {},
+          "previousYear": {},
+          "rangePlaceholder": {},
+          "timeSelect": {},
+          "today": {},
+          "weekSelect": {},
+          "year": {},
+          "yearFormat": {},
+          "yearSelect": {}
+        },
+        "timePickerLocale": {
+          "placeholder": {}
+        }
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -3091,7 +3506,10 @@ var antd = {
         "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
-        "filterTitle": {}
+        "filterTitle": {},
+        "selectAll": {},
+        "selectInvert": {},
+        "sortTitle": {}
       },
       "TimePicker": {
         "placeholder": {}
@@ -3100,7 +3518,254 @@ var antd = {
         "itemUnit": {},
         "itemsUnit": {},
         "notFoundContent": {},
+        "searchPlaceholder": {},
+        "titles": {}
+      },
+      "Upload": {
+        "previewFile": {},
+        "removeFile": {},
+        "uploadError": {},
+        "uploading": {}
+      },
+      "global": {
+        "placeholder": {}
+      },
+      "locale": {}
+    },
+    "hu_HU": {
+      "Calendar": {
+        "lang": {
+          "backToToday": {},
+          "clear": {},
+          "dateFormat": {},
+          "dateSelect": {},
+          "dateTimeFormat": {},
+          "dayFormat": {},
+          "decadeSelect": {},
+          "month": {},
+          "monthBeforeYear": {},
+          "monthSelect": {},
+          "nextCentury": {},
+          "nextDecade": {},
+          "nextMonth": {},
+          "nextYear": {},
+          "now": {},
+          "ok": {},
+          "placeholder": {},
+          "previousCentury": {},
+          "previousDecade": {},
+          "previousMonth": {},
+          "previousYear": {},
+          "rangePlaceholder": {},
+          "timeSelect": {},
+          "today": {},
+          "year": {},
+          "yearFormat": {},
+          "yearSelect": {}
+        },
+        "timePickerLocale": {
+          "placeholder": {}
+        }
+      },
+      "DatePicker": {
+        "lang": {
+          "backToToday": {},
+          "clear": {},
+          "dateFormat": {},
+          "dateSelect": {},
+          "dateTimeFormat": {},
+          "dayFormat": {},
+          "decadeSelect": {},
+          "month": {},
+          "monthBeforeYear": {},
+          "monthSelect": {},
+          "nextCentury": {},
+          "nextDecade": {},
+          "nextMonth": {},
+          "nextYear": {},
+          "now": {},
+          "ok": {},
+          "placeholder": {},
+          "previousCentury": {},
+          "previousDecade": {},
+          "previousMonth": {},
+          "previousYear": {},
+          "rangePlaceholder": {},
+          "timeSelect": {},
+          "today": {},
+          "year": {},
+          "yearFormat": {},
+          "yearSelect": {}
+        },
+        "timePickerLocale": {
+          "placeholder": {}
+        }
+      },
+      "Empty": {
+        "description": {}
+      },
+      "Modal": {
+        "cancelText": {},
+        "justOkText": {},
+        "okText": {}
+      },
+      "Pagination": {
+        "items_per_page": {},
+        "jump_to": {},
+        "jump_to_confirm": {},
+        "next_3": {},
+        "next_5": {},
+        "next_page": {},
+        "page": {},
+        "prev_3": {},
+        "prev_5": {},
+        "prev_page": {}
+      },
+      "Popconfirm": {
+        "cancelText": {},
+        "okText": {}
+      },
+      "Table": {
+        "filterConfirm": {},
+        "filterReset": {},
+        "filterTitle": {},
+        "selectAll": {},
+        "selectInvert": {},
+        "sortTitle": {}
+      },
+      "TimePicker": {
+        "placeholder": {}
+      },
+      "Transfer": {
+        "itemUnit": {},
+        "itemsUnit": {},
         "searchPlaceholder": {}
+      },
+      "Upload": {
+        "previewFile": {},
+        "removeFile": {},
+        "uploadError": {},
+        "uploading": {}
+      },
+      "locale": {}
+    },
+    "id_ID": {
+      "Calendar": {
+        "lang": {
+          "backToToday": {},
+          "clear": {},
+          "dateFormat": {},
+          "dateSelect": {},
+          "dateTimeFormat": {},
+          "dayFormat": {},
+          "decadeSelect": {},
+          "month": {},
+          "monthBeforeYear": {},
+          "monthSelect": {},
+          "nextCentury": {},
+          "nextDecade": {},
+          "nextMonth": {},
+          "nextYear": {},
+          "now": {},
+          "ok": {},
+          "placeholder": {},
+          "previousCentury": {},
+          "previousDecade": {},
+          "previousMonth": {},
+          "previousYear": {},
+          "rangePlaceholder": {},
+          "timeSelect": {},
+          "today": {},
+          "weekSelect": {},
+          "year": {},
+          "yearFormat": {},
+          "yearSelect": {}
+        },
+        "timePickerLocale": {
+          "placeholder": {}
+        }
+      },
+      "DatePicker": {
+        "lang": {
+          "backToToday": {},
+          "clear": {},
+          "dateFormat": {},
+          "dateSelect": {},
+          "dateTimeFormat": {},
+          "dayFormat": {},
+          "decadeSelect": {},
+          "month": {},
+          "monthBeforeYear": {},
+          "monthSelect": {},
+          "nextCentury": {},
+          "nextDecade": {},
+          "nextMonth": {},
+          "nextYear": {},
+          "now": {},
+          "ok": {},
+          "placeholder": {},
+          "previousCentury": {},
+          "previousDecade": {},
+          "previousMonth": {},
+          "previousYear": {},
+          "rangePlaceholder": {},
+          "timeSelect": {},
+          "today": {},
+          "weekSelect": {},
+          "year": {},
+          "yearFormat": {},
+          "yearSelect": {}
+        },
+        "timePickerLocale": {
+          "placeholder": {}
+        }
+      },
+      "Empty": {
+        "description": {}
+      },
+      "Modal": {
+        "cancelText": {},
+        "justOkText": {},
+        "okText": {}
+      },
+      "Pagination": {
+        "items_per_page": {},
+        "jump_to": {},
+        "jump_to_confirm": {},
+        "next_3": {},
+        "next_5": {},
+        "next_page": {},
+        "page": {},
+        "prev_3": {},
+        "prev_5": {},
+        "prev_page": {}
+      },
+      "Popconfirm": {
+        "cancelText": {},
+        "okText": {}
+      },
+      "Table": {
+        "filterConfirm": {},
+        "filterReset": {},
+        "filterTitle": {},
+        "selectAll": {},
+        "selectInvert": {},
+        "sortTitle": {}
+      },
+      "TimePicker": {
+        "placeholder": {}
+      },
+      "Transfer": {
+        "itemUnit": {},
+        "itemsUnit": {},
+        "searchPlaceholder": {},
+        "titles": {}
+      },
+      "Upload": {
+        "previewFile": {},
+        "removeFile": {},
+        "uploadError": {},
+        "uploading": {}
       },
       "locale": {}
     },
@@ -3173,6 +3838,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -3194,11 +3862,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -3211,7 +3875,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -3291,6 +3954,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -3312,16 +3978,13 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
         "selectAll": {},
-        "selectInvert": {}
+        "selectInvert": {},
+        "sortTitle": {}
       },
       "TimePicker": {
         "placeholder": {}
@@ -3329,7 +3992,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -3407,6 +4069,124 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
+      "Modal": {
+        "cancelText": {},
+        "justOkText": {},
+        "okText": {}
+      },
+      "Pagination": {
+        "items_per_page": {},
+        "jump_to": {},
+        "jump_to_confirm": {},
+        "next_3": {},
+        "next_5": {},
+        "next_page": {},
+        "page": {},
+        "prev_3": {},
+        "prev_5": {},
+        "prev_page": {}
+      },
+      "Popconfirm": {
+        "cancelText": {},
+        "okText": {}
+      },
+      "Table": {
+        "filterConfirm": {},
+        "filterReset": {},
+        "filterTitle": {},
+        "selectAll": {},
+        "selectInvert": {}
+      },
+      "TimePicker": {
+        "placeholder": {}
+      },
+      "Transfer": {
+        "itemUnit": {},
+        "itemsUnit": {},
+        "searchPlaceholder": {}
+      },
+      "Upload": {
+        "previewFile": {},
+        "removeFile": {},
+        "uploadError": {},
+        "uploading": {}
+      },
+      "locale": {}
+    },
+    "kn_IN": {
+      "Calendar": {
+        "lang": {
+          "backToToday": {},
+          "clear": {},
+          "dateFormat": {},
+          "dateSelect": {},
+          "dateTimeFormat": {},
+          "dayFormat": {},
+          "decadeSelect": {},
+          "month": {},
+          "monthBeforeYear": {},
+          "monthSelect": {},
+          "nextCentury": {},
+          "nextDecade": {},
+          "nextMonth": {},
+          "nextYear": {},
+          "now": {},
+          "ok": {},
+          "placeholder": {},
+          "previousCentury": {},
+          "previousDecade": {},
+          "previousMonth": {},
+          "previousYear": {},
+          "rangePlaceholder": {},
+          "timeSelect": {},
+          "today": {},
+          "weekSelect": {},
+          "year": {},
+          "yearFormat": {},
+          "yearSelect": {}
+        },
+        "timePickerLocale": {
+          "placeholder": {}
+        }
+      },
+      "DatePicker": {
+        "lang": {
+          "backToToday": {},
+          "clear": {},
+          "dateFormat": {},
+          "dateSelect": {},
+          "dateTimeFormat": {},
+          "dayFormat": {},
+          "decadeSelect": {},
+          "month": {},
+          "monthBeforeYear": {},
+          "monthSelect": {},
+          "nextCentury": {},
+          "nextDecade": {},
+          "nextMonth": {},
+          "nextYear": {},
+          "now": {},
+          "ok": {},
+          "placeholder": {},
+          "previousCentury": {},
+          "previousDecade": {},
+          "previousMonth": {},
+          "previousYear": {},
+          "rangePlaceholder": {},
+          "timeSelect": {},
+          "today": {},
+          "weekSelect": {},
+          "year": {},
+          "yearFormat": {},
+          "yearSelect": {}
+        },
+        "timePickerLocale": {
+          "placeholder": {}
+        }
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -3437,7 +4217,8 @@ var antd = {
         "filterReset": {},
         "filterTitle": {},
         "selectAll": {},
-        "selectInvert": {}
+        "selectInvert": {},
+        "sortTitle": {}
       },
       "TimePicker": {
         "placeholder": {}
@@ -3446,13 +4227,17 @@ var antd = {
         "itemUnit": {},
         "itemsUnit": {},
         "notFoundContent": {},
-        "searchPlaceholder": {}
+        "searchPlaceholder": {},
+        "titles": {}
       },
       "Upload": {
         "previewFile": {},
         "removeFile": {},
         "uploadError": {},
         "uploading": {}
+      },
+      "global": {
+        "placeholder": {}
       },
       "locale": {}
     },
@@ -3525,6 +4310,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -3546,14 +4334,12 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
-        "filterTitle": {}
+        "filterTitle": {},
+        "selectAll": {},
+        "selectInvert": {}
       },
       "TimePicker": {
         "placeholder": {}
@@ -3561,7 +4347,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -3641,6 +4426,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -3662,11 +4450,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -3679,7 +4463,124 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
+        "searchPlaceholder": {}
+      },
+      "Upload": {
+        "previewFile": {},
+        "removeFile": {},
+        "uploadError": {},
+        "uploading": {}
+      },
+      "locale": {}
+    },
+    "mn_MN": {
+      "Calendar": {
+        "lang": {
+          "backToToday": {},
+          "clear": {},
+          "dateFormat": {},
+          "dateSelect": {},
+          "dateTimeFormat": {},
+          "dayFormat": {},
+          "decadeSelect": {},
+          "month": {},
+          "monthBeforeYear": {},
+          "monthSelect": {},
+          "nextCentury": {},
+          "nextDecade": {},
+          "nextMonth": {},
+          "nextYear": {},
+          "now": {},
+          "ok": {},
+          "placeholder": {},
+          "previousCentury": {},
+          "previousDecade": {},
+          "previousMonth": {},
+          "previousYear": {},
+          "rangePlaceholder": {},
+          "timeSelect": {},
+          "today": {},
+          "weekSelect": {},
+          "year": {},
+          "yearFormat": {},
+          "yearSelect": {}
+        },
+        "timePickerLocale": {
+          "placeholder": {}
+        }
+      },
+      "DatePicker": {
+        "lang": {
+          "backToToday": {},
+          "clear": {},
+          "dateFormat": {},
+          "dateSelect": {},
+          "dateTimeFormat": {},
+          "dayFormat": {},
+          "decadeSelect": {},
+          "month": {},
+          "monthBeforeYear": {},
+          "monthSelect": {},
+          "nextCentury": {},
+          "nextDecade": {},
+          "nextMonth": {},
+          "nextYear": {},
+          "now": {},
+          "ok": {},
+          "placeholder": {},
+          "previousCentury": {},
+          "previousDecade": {},
+          "previousMonth": {},
+          "previousYear": {},
+          "rangePlaceholder": {},
+          "timeSelect": {},
+          "today": {},
+          "weekSelect": {},
+          "year": {},
+          "yearFormat": {},
+          "yearSelect": {}
+        },
+        "timePickerLocale": {
+          "placeholder": {}
+        }
+      },
+      "Empty": {
+        "description": {}
+      },
+      "Modal": {
+        "cancelText": {},
+        "justOkText": {},
+        "okText": {}
+      },
+      "Pagination": {
+        "items_per_page": {},
+        "jump_to": {},
+        "jump_to_confirm": {},
+        "next_3": {},
+        "next_5": {},
+        "next_page": {},
+        "page": {},
+        "prev_3": {},
+        "prev_5": {},
+        "prev_page": {}
+      },
+      "Popconfirm": {
+        "cancelText": {},
+        "okText": {}
+      },
+      "Table": {
+        "filterConfirm": {},
+        "filterReset": {},
+        "filterTitle": {},
+        "selectAll": {},
+        "selectInvert": {}
+      },
+      "TimePicker": {
+        "placeholder": {}
+      },
+      "Transfer": {
+        "itemUnit": {},
+        "itemsUnit": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -3759,6 +4660,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -3779,11 +4683,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -3796,7 +4696,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -3876,6 +4775,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -3897,11 +4799,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -3914,7 +4812,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -3994,6 +4891,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -4015,11 +4915,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -4032,7 +4928,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -4112,6 +5007,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -4133,11 +5031,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -4150,7 +5044,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -4230,6 +5123,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -4251,11 +5147,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -4268,7 +5160,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -4350,6 +5241,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -4371,11 +5265,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -4388,7 +5278,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -4468,6 +5357,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -4489,11 +5381,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -4506,7 +5394,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -4586,6 +5473,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -4607,11 +5497,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -4624,7 +5510,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -4706,6 +5591,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -4727,11 +5615,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -4744,7 +5628,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -4824,6 +5707,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -4844,11 +5730,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -4861,7 +5743,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -4941,6 +5822,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -4962,11 +5846,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {}
@@ -4977,7 +5857,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "locale": {}
@@ -5051,6 +5930,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -5072,11 +5954,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -5089,7 +5967,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -5169,6 +6046,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -5190,11 +6070,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -5207,7 +6083,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -5287,6 +6162,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -5308,11 +6186,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -5325,7 +6199,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -5363,6 +6236,7 @@ var antd = {
           "rangePlaceholder": {},
           "timeSelect": {},
           "today": {},
+          "weekSelect": {},
           "year": {},
           "yearFormat": {},
           "yearSelect": {}
@@ -5397,6 +6271,7 @@ var antd = {
           "rangePlaceholder": {},
           "timeSelect": {},
           "today": {},
+          "weekSelect": {},
           "year": {},
           "yearFormat": {},
           "yearSelect": {}
@@ -5404,6 +6279,9 @@ var antd = {
         "timePickerLocale": {
           "placeholder": {}
         }
+      },
+      "Empty": {
+        "description": {}
       },
       "Modal": {
         "cancelText": {},
@@ -5426,11 +6304,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -5443,7 +6317,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -5480,6 +6353,7 @@ var antd = {
           "rangePlaceholder": {},
           "timeSelect": {},
           "today": {},
+          "weekSelect": {},
           "year": {},
           "yearFormat": {},
           "yearSelect": {}
@@ -5513,6 +6387,7 @@ var antd = {
           "rangePlaceholder": {},
           "timeSelect": {},
           "today": {},
+          "weekSelect": {},
           "year": {},
           "yearFormat": {},
           "yearSelect": {}
@@ -5520,6 +6395,9 @@ var antd = {
         "timePickerLocale": {
           "placeholder": {}
         }
+      },
+      "Empty": {
+        "description": {}
       },
       "Modal": {
         "cancelText": {},
@@ -5542,16 +6420,13 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
         "selectAll": {},
-        "selectInvert": {}
+        "selectInvert": {},
+        "sortTitle": {}
       },
       "TimePicker": {
         "placeholder": {}
@@ -5559,7 +6434,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -5567,6 +6441,9 @@ var antd = {
         "removeFile": {},
         "uploadError": {},
         "uploading": {}
+      },
+      "global": {
+        "placeholder": {}
       },
       "locale": {}
     },
@@ -5637,6 +6514,9 @@ var antd = {
           "placeholder": {}
         }
       },
+      "Empty": {
+        "description": {}
+      },
       "Modal": {
         "cancelText": {},
         "justOkText": {},
@@ -5658,11 +6538,7 @@ var antd = {
         "cancelText": {},
         "okText": {}
       },
-      "Select": {
-        "notFoundContent": {}
-      },
       "Table": {
-        "emptyText": {},
         "filterConfirm": {},
         "filterReset": {},
         "filterTitle": {},
@@ -5675,7 +6551,6 @@ var antd = {
       "Transfer": {
         "itemUnit": {},
         "itemsUnit": {},
-        "notFoundContent": {},
         "searchPlaceholder": {}
       },
       "Upload": {
@@ -5693,6 +6568,7 @@ var antd = {
     "error": function () {},
     "info": function () {},
     "loading": function () {},
+    "open": function () {},
     "success": function () {},
     "warn": function () {},
     "warning": function () {}
@@ -5771,6 +6647,8 @@ antd.Breadcrumb.Item.prototype = {
   "setState": function () {}
 };
 antd.Button.prototype = {
+  "componentWillMount": function () {},
+  "componentWillReceiveProps": function () {},
   "forceUpdate": function () {},
   "isReactComponent": function () {},
   "setState": function () {}
@@ -5791,6 +6669,8 @@ antd.Carousel.prototype = {
   "setState": function () {}
 };
 antd.Cascader.prototype = {
+  "componentWillMount": function () {},
+  "componentWillReceiveProps": function () {},
   "forceUpdate": function () {},
   "isReactComponent": function () {},
   "setState": function () {}
@@ -5801,6 +6681,8 @@ antd.Checkbox.prototype = {
   "setState": function () {}
 };
 antd.Checkbox.Group.prototype = {
+  "componentWillMount": function () {},
+  "componentWillReceiveProps": function () {},
   "forceUpdate": function () {},
   "isReactComponent": function () {},
   "setState": function () {}
@@ -5816,6 +6698,16 @@ antd.Collapse.prototype = {
   "setState": function () {}
 };
 antd.Collapse.Panel.prototype = {
+  "forceUpdate": function () {},
+  "isReactComponent": function () {},
+  "setState": function () {}
+};
+antd.Comment.prototype = {
+  "forceUpdate": function () {},
+  "isReactComponent": function () {},
+  "setState": function () {}
+};
+antd.ConfigProvider.prototype = {
   "forceUpdate": function () {},
   "isReactComponent": function () {},
   "setState": function () {}
@@ -5861,6 +6753,13 @@ antd.Form.Item.prototype = {
   "setState": function () {}
 };
 antd.Input.prototype = {
+  "componentWillMount": function () {},
+  "componentWillReceiveProps": function () {},
+  "forceUpdate": function () {},
+  "isReactComponent": function () {},
+  "setState": function () {}
+};
+antd.Input.Password.prototype = {
   "forceUpdate": function () {},
   "isReactComponent": function () {},
   "setState": function () {}
@@ -5901,6 +6800,8 @@ antd.Layout.Header.prototype = {
   "setState": function () {}
 };
 antd.Layout.Sider.prototype = {
+  "componentWillMount": function () {},
+  "componentWillReceiveProps": function () {},
   "forceUpdate": function () {},
   "isReactComponent": function () {},
   "setState": function () {}
@@ -5969,6 +6870,8 @@ antd.Pagination.prototype = {
   "setState": function () {}
 };
 antd.Popconfirm.prototype = {
+  "componentWillMount": function () {},
+  "componentWillReceiveProps": function () {},
   "forceUpdate": function () {},
   "isReactComponent": function () {},
   "setState": function () {}
@@ -5994,6 +6897,8 @@ antd.Radio.Button.prototype = {
   "setState": function () {}
 };
 antd.Radio.Group.prototype = {
+  "componentWillMount": function () {},
+  "componentWillReceiveProps": function () {},
   "forceUpdate": function () {},
   "isReactComponent": function () {},
   "setState": function () {}
@@ -6023,6 +6928,11 @@ antd.Select.Option.prototype = {
   "isReactComponent": function () {},
   "setState": function () {}
 };
+antd.Skeleton.prototype = {
+  "forceUpdate": function () {},
+  "isReactComponent": function () {},
+  "setState": function () {}
+};
 antd.Slider.prototype = {
   "forceUpdate": function () {},
   "isReactComponent": function () {},
@@ -6041,6 +6951,8 @@ antd.Steps.prototype = {
 antd.Steps.Step.prototype = {
   "forceUpdate": function () {},
   "isReactComponent": function () {},
+  "render": function () {},
+  "renderIconNode": function () {},
   "setState": function () {}
 };
 antd.Switch.prototype = {
@@ -6069,35 +6981,13 @@ antd.Tabs.prototype = {
   "setState": function () {}
 };
 antd.Tabs.TabPane.prototype = {
-  "UNSAFE_componentWillMount": function () {},
-  "UNSAFE_componentWillReceiveProps": function () {},
-  "UNSAFE_componentWillUpdate": function () {},
-  "__reactAutoBindPairs": function () {},
-  "childContextTypes": function () {},
-  "componentDidMount": function () {},
-  "componentDidUpdate": function () {},
-  "componentWillMount": function () {},
-  "componentWillReceiveProps": function () {},
-  "componentWillUnmount": function () {},
-  "componentWillUpdate": function () {},
-  "constructor": function () {},
-  "contextTypes": function () {},
   "forceUpdate": function () {},
-  "getChildContext": function () {},
-  "getDefaultProps": function () {},
-  "getInitialState": function () {},
-  "isMounted": function () {},
   "isReactComponent": function () {},
-  "mixins": function () {},
-  "propTypes": function () {},
-  "render": function () {},
-  "replaceState": function () {},
-  "setState": function () {},
-  "shouldComponentUpdate": function () {},
-  "statics": function () {},
-  "updateComponent": function () {}
+  "setState": function () {}
 };
 antd.Tag.prototype = {
+  "componentWillMount": function () {},
+  "componentWillReceiveProps": function () {},
   "forceUpdate": function () {},
   "isReactComponent": function () {},
   "setState": function () {}
@@ -6108,6 +6998,8 @@ antd.Tag.CheckableTag.prototype = {
   "setState": function () {}
 };
 antd.TimePicker.prototype = {
+  "componentWillMount": function () {},
+  "componentWillReceiveProps": function () {},
   "forceUpdate": function () {},
   "isReactComponent": function () {},
   "setState": function () {}
@@ -6117,12 +7009,9 @@ antd.Timeline.prototype = {
   "isReactComponent": function () {},
   "setState": function () {}
 };
-antd.Timeline.Item.prototype = {
-  "forceUpdate": function () {},
-  "isReactComponent": function () {},
-  "setState": function () {}
-};
 antd.Tooltip.prototype = {
+  "componentWillMount": function () {},
+  "componentWillReceiveProps": function () {},
   "forceUpdate": function () {},
   "isReactComponent": function () {},
   "setState": function () {}
@@ -6152,14 +7041,14 @@ antd.Tree.prototype = {
   "isReactComponent": function () {},
   "setState": function () {}
 };
-antd.Tree.TreeNode.prototype = {
-  "componentDidMount": function () {},
-  "componentWillReceiveProps": function () {},
+antd.Tree.DirectoryTree.prototype = {
   "forceUpdate": function () {},
-  "getChildContext": function () {},
   "isReactComponent": function () {},
-  "isSelectable": function () {},
-  "render": function () {},
+  "setState": function () {}
+};
+antd.Tree.TreeNode.prototype = {
+  "forceUpdate": function () {},
+  "isReactComponent": function () {},
   "setState": function () {}
 };
 antd.TreeSelect.prototype = {
@@ -6167,12 +7056,9 @@ antd.TreeSelect.prototype = {
   "isReactComponent": function () {},
   "setState": function () {}
 };
-antd.TreeSelect.TreeNode.prototype = {
-  "forceUpdate": function () {},
-  "isReactComponent": function () {},
-  "setState": function () {}
-};
 antd.Upload.prototype = {
+  "componentWillMount": function () {},
+  "componentWillReceiveProps": function () {},
   "forceUpdate": function () {},
   "isReactComponent": function () {},
   "setState": function () {}

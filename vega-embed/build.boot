@@ -1,13 +1,12 @@
 (set-env!
   :resource-paths #{"resources"}
-  :dependencies '[[cljsjs/boot-cljsjs "0.10.0" :scope "test"]
-                  [cljsjs/vega "3.2.1-0"]
-                  [cljsjs/vega-lite "2.2.0-0"]])
+  :dependencies '[[cljsjs/boot-cljsjs "0.10.3" :scope "test"]
+                  [cljsjs/vega "4.4.0-0"]
+                  [cljsjs/vega-lite "3.0.0-rc10-0"]])
 
 (require '[cljsjs.boot-cljsjs.packaging :refer :all])
 
-(def +lib-version+ "3.1.1")
-
+  (def +lib-version+ "3.26.0")
 (def +version+ (str +lib-version+ "-0"))
 
 (task-options!
@@ -21,13 +20,18 @@
   (task-options! push {:ensure-branch nil})
   (comp
     (download
-      :url (str "https://github.com/vega/vega-embed/archive/v" +lib-version+ ".zip")
-      :unzip true
-      :checksum "8D872F80C26BC260D7D83FCB5CC148AE")
-    (sift :move {(re-pattern (str "^vega-embed-" +lib-version+ "/build/vega-embed.js$")) "cljsjs/development/vega-embed.inc.js"
-                 (re-pattern (str "^vega-embed-" +lib-version+ "/build/vega-embed.min.js$")) "cljsjs/production/vega-embed.min.inc.js"})
+     :url (format "https://unpkg.com/vega-embed@%s/build/vega-embed.js" +lib-version+)
+     :checksum "F19B68E44197E68EFF6F3CA9853E22F4")
+    (download
+     :url (format "https://unpkg.com/vega-embed@%s/build/vega-embed.min.js" +lib-version+)
+     :checksum "F5A79DB2A11969A205EC0222E28D9EFB")
+    (download
+     :url (format "https://unpkg.com/vega-embed@%s/vega-embed.css" +lib-version+)
+     :checksum "CFA09422ACF13696B84282A5FCE9267A")
+    (sift :move {#".*vega-embed\.js$"      "cljsjs/development/vega-embed.inc.js"})
+    (sift :move {#".*vega-embed\.min\.js$" "cljsjs/production/vega-embed.min.inc.js"})
+    (sift :move {#".*vega-embed\.css$"     "cljsjs/vega-embed/common/vega-embed.css"})
     (sift :include #{#"^cljsjs"})
-    (deps-cljs :name "cljsjs.vega-embed"
-               :requires ["cljsjs.vega" "cljsjs.vega-lite"])
+    (deps-cljs :name "cljsjs.vega-embed" :requires ["cljsjs.vega" "cljsjs.vega-lite"])
     (pom)
     (jar)))
