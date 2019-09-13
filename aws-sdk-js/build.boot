@@ -1,14 +1,14 @@
 (set-env!
   :resource-paths #{"resources"}
-  :dependencies '[[cljsjs/boot-cljsjs "0.10.3" :scope "test"]])
+  :dependencies '[[cljsjs/boot-cljsjs "0.10.4" :scope "test"]])
 
 (require '[cljsjs.boot-cljsjs.packaging :refer :all])
 
 ;; Example Build and Deploy to Clojars:
 ;; boot package target
-;; boot push --repo clojars --file target/aws-sdk-js-2.394.0-1.jar
+;; boot push --repo clojars --file target/aws-sdk-js-2.527.0-1.jar
 
-(def +lib-version+ "2.394.0")
+(def +lib-version+ "2.527.0")
 (def +version+ (str +lib-version+ "-1"))
 
 ;; The clojars username and password values will be pulled from .lein/credentials (see .boot/profile.boot)
