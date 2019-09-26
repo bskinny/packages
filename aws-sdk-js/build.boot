@@ -9,7 +9,7 @@
 ;; boot push --repo clojars --file target/aws-sdk-js-2.527.0-1.jar
 
 (def +lib-version+ "2.527.0")
-(def +version+ (str +lib-version+ "-1"))
+(def +version+ (str +lib-version+ "-2"))
 
 ;; The clojars username and password values will be pulled from .lein/credentials (see .boot/profile.boot)
 (set-env! :repositories [["clojars" {:url "https://clojars.org/repo/"}]])

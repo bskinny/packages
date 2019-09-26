@@ -28,6 +28,7 @@ AWS.CognitoIdentityCredentials.prototype = {
   "getId": function () {},
   "getPromise": function () {},
   "getStorage": function () {},
+	"identityId": {},
   "load": function () {},
   "loadCachedId": function () {},
   "loadCredentials": function () {},
